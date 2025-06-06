@@ -1,0 +1,369 @@
+:root {
+  --bg: #0A0A0A;
+  --primary: #00FFFF;
+  --accent: #9D00FF;
+  --text: #E0E0E0;
+  --card: #1F1F1F;
+  --success: #39FF14;
+  --error: #FF073A;
+  --font-tech: 'Orbitron', sans-serif;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,body {
+  height: 100%;
+  width: 100%;
+  
+}
+
+.page1{
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--bg);
+  position: relative;
+  z-index: -1;
+  padding: 1rem;
+  overflow: hidden;
+}
+
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  padding: 2vw 3vw;
+  background-color: #08080800;
+}
+.logo-text{
+  font-family: var(--font-tech);
+  color: var(--error);
+}
+.nova{
+  color: var(--primary);
+}
+
+.navchild{
+  display: flex;
+  color: var(--text);
+  align-items: center;
+  justify-content: end;
+  gap: 2rem;
+  flex-grow: 1;
+}
+
+.navchild h4{
+  font-family: var(--font-tech);
+  font-size: .9rem;
+  font-weight: 400;
+  padding: 0.5rem 0.9rem;
+  border: #c4c4c498 solid 1px;
+  border-radius: 50px;
+  position: relative;
+  overflow: hidden;
+  transition: all ease 0.4s;
+}
+
+.navchild h4 a{
+  text-decoration: none;
+  color: var(--text);
+  z-index: 1;
+  position: relative;
+}
+
+.hero{
+  padding: 1rem 2rem;
+  height: 68vh;
+  width: 100vw;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.left{
+  width: 55vw;
+}
+.left h4{
+  font-family: var(--font-tech);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text);
+  line-height: 2vw;
+}
+.right h1{
+  font-size: 6.9rem;
+  text-align: end;
+  line-height: 12vh;
+  padding-right: 2rem;
+}
+.hero-btn{
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  border: none;
+  color: var(--card);
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 16px;
+  margin-top: 10px;
+  background-color: #0A0A0A;
+  color: #E0E0E0;
+  border: #FF073A solid 1px;
+}
+.hero-btn:hover{
+  cursor: pointer;
+  border: #E0E0E0 1px solid;
+  background-color: #ffffff;
+  color: var(--bg);
+}
+
+.glow-bg {
+  position: absolute;
+  width: 300px;
+  height: 400px;
+  background: #00ffae;
+  opacity: 0.5;
+  filter: blur(120px);
+  top: -250px;
+  left: 70%;
+  transform: translateX(-50%);
+  transform: skew(20px);
+  z-index: -1;
+  border-radius: 50%;
+  rotate: 40deg;
+}
+.glow-bg1 {
+  position: absolute;
+  width: 300px;
+  height: 500px;
+  background: #00ffae;
+  opacity: 0.5;
+  filter: blur(100px);
+  top: -360px;
+  left: 30%;
+  transform: translateX(-50%);
+  transform: skew(-25deg);
+  z-index: -1;
+  border-radius: 50%;
+}
+/* .glow-bg1 {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: #00ffae;
+  opacity: 0.6;
+  filter: blur(80px);
+  top: 750px;
+  left: 80%;
+  transform: translateX(-50%);
+  z-index: -1;
+  border-radius: 50%;
+} */
+.glow-bg2 {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: #00fff2c5;
+  opacity: 0.7;
+  filter: blur(40px);
+  top: 650px;
+  left: 75%;
+  transform: translateX(-50%);
+  z-index: 9;
+  border-radius: 50%;
+  animation: anime2 3s infinite linear alternate;
+}
+.glow-bg3 {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: #00ffae;
+  opacity: 0.8;
+  filter: blur(40px);
+  top: 650px;
+  left: 69%;
+  transform: translateX(-50%);
+  z-index: -1;
+  border-radius: 50%;
+  animation: anime1 3s infinite ease-in alternate;
+}
+@keyframes anime1 {
+  from{
+    transform: translate(-10%,10%);
+  }to{
+    transform: translate(10%,-10%);
+  }
+}
+@keyframes anime2 {
+  from{
+    transform: translate(15%,10%);
+  }to{
+    transform: translate(-10%,15%);
+  }
+}
+.glow-bgmain{
+  overflow: hidden;
+}
+
+.page2 {
+  min-height: 100vh;
+  width: 100vw;
+  background-color: var(--bg);
+  position: relative;
+}
+
+.movingtext{
+  height: 150px;
+  width: 100%;
+  background-color: #1F1F1F;
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  gap: 2;
+  overflow-x: auto;
+}
+.movingtext ::-webkit-scrollbar{
+  display: none;
+}
+.movingtext {
+  scrollbar-width: none; /* Firefox scrollbar hide */
+}
+
+.con{
+  display: flex;
+  justify-content: center;
+  white-space: nowrap;
+  align-items: center;
+  gap: 2;
+  animation: move infinite linear 8s;
+}
+.con h1{
+  font-family: var(--font-tech);
+  display: inline-block;
+  font-size: 60px;
+}
+.circle{
+  width: 50px;
+  height: 50px;
+  background-color: #39FF14;
+  border-radius: 50%;
+  display: inline-block ;
+  margin: 1vw 2vw;
+}
+
+@keyframes move {
+  from{
+    transform: translateX(0);
+  }to{
+    transform: translateX(-100%);
+  }
+}
+.end-page2{
+  height: 80vh;
+  width: 100%;
+  background-color: var(--bg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3vw 4vw;
+}
+.end-page2 h1 {
+  font-family: var(--font-tech);
+  color: var(--text);
+  width: 40%;
+  font-size: 1vw;
+  line-height: 2.1vw;
+}
+.end-btm{
+  width: 26%;
+  background-color: #1f1f1f1f;
+  border: #e0e0e01a 1px solid;
+  padding: 2rem 0.5rem;
+  border-radius: 25px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+
+}
+.end-btm img{
+  width: 400px;
+  border-radius: 20px;
+  opacity: 0.7;
+  border: #e0e0e01a 1px solid;
+}
+.end-btm p{
+  font-family: "Poppins";
+  color: var(--text);
+  font-size: 15px;
+  margin-top: 6px;
+  text-align: center;
+  
+}
+.animation-circle{
+  position: absolute;
+  width: 20vw;
+  height: 20vw;
+  background-color: #00ffae;
+  top: 55%;
+  left: 400px;
+  border-radius:50% ;
+  filter: blur(20px);
+  opacity: 0.7;
+  z-index: 0;
+}
+.ani-cir1{
+  position: absolute;
+  width: 20vw;
+  height: 20vw;
+  background-color: #77ffd4;
+  top: 2%;
+  left: 10px;
+  border-radius:50% ;
+  filter: blur(20px);
+  opacity: 0.7;
+  z-index: 0;
+  animation: anime1 4s infinite ease-in alternate;
+}
+.ani-cir2{
+  position: absolute;
+  width: 20vw;
+  height: 20vw;
+  background-color: #42ffefcb;
+  top: -10%;
+  left: -10px;
+  border-radius:50% ;
+  filter: blur(20px);
+  opacity: 0.7;
+  z-index: 0;
+  animation: anime2 5s infinite ease-in alternate;
+}
+.bg-glow
+  {
+  position: absolute;
+  width: 300px;
+  height: 500px;
+  background: #00ffae;
+  opacity: 0.2;
+  filter: blur(100px);
+  top: 10px;
+  left: 30%;
+  transform: translateX(-50%);
+  transform: skew(-25deg);
+  z-index: -1;
+  border-radius: 50%;
+}
+.end-btn{
+  margin-top: 10px;
+  padding: 0.5rem 1rem;
+  background-color: var(--card);
+  color: var(--text);
+  border: solid 1px var(--primary);
+  border-radius: 50px;
+}
+.end-btn:hover{
+  cursor: pointer;
+  background-color: var(--text);
+  color: var(--bg);
+  border: solid black 1px;
+}
